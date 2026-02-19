@@ -1,20 +1,20 @@
 const CARD_POOL = [
-  { name: "カード1", rarity: "★★",    img: "assets/cards/AZのフラエッテ_ポケカ.png" },
-  { name: "カード2", rarity: "★★",    img: "assets/cards/アーゴヨン_ポケカ.png" },
-  { name: "カード3", rarity: "◆◆",    img: "assets/cards/アーマーガア_ポケカ.png" },
-  { name: "カード4", rarity: "★",    img: "assets/cards/アーマーガア_ポケカ.png" },
-  { name: "カード5", rarity: "★",  img: "assets/cards/アクジキング_ポケカ.png" },
-  { name: "カード6", rarity: "★★",  img: "assets/cards/アグノム_ポケカ.png" },
-  { name: "カード7", rarity: "★★",  img: "assets/cards/アシレーヌ_ポケカ.png" },
-  { name: "カード8", rarity: "◆", img: "assets/cards/アズマオウ_ポケカ.png" },
-  { name: "カード9", rarity: "★★", img: "assets/cards/アブソル_ポケカ.png" },
-  { name: "カード10",rarity: "★★",img: "assets/cards/アブソル2_ポケカ.png" },
-  { name: "カード11", rarity: "◆",  img: "assets/cards/アママイコ_ポケカ.png" },
-  { name: "カード12", rarity: "◆◆",  img: "assets/cards/アマルルガ_ポケカ.png" },
-  { name: "カード13", rarity: "◆",  img: "assets/cards/アメモース_ポケカ.png" },
-  { name: "カード14", rarity: "★", img: "assets/cards/アラブルタケ_ポケカ.png" },
-  { name: "カード15", rarity: "★★★", img: "assets/cards/アルセウス_ポケカ.png" },
-  { name: "カード16",rarity: "★★★",img: "assets/cards/アルセウス2_ポケカ.png" }
+  { name: "AZのフラエッテ", rarity: "★★",    img: "assets/cards/AZのフラエッテ_ポケカ.png" },
+  { name: "アーゴヨン", rarity: "★★",    img: "assets/cards/アーゴヨン_ポケカ.png" },
+  { name: "アーマーガア", rarity: "◆◆",    img: "assets/cards/アーマーガア_ポケカ.png" },
+  { name: "アーマルド", rarity: "★",    img: "assets/cards/アーマルド_ポケカ_ポケカ.png" },
+  { name: "アクジキング", rarity: "★",  img: "assets/cards/アクジキング_ポケカ.png" },
+  { name: "アグノム", rarity: "★★",  img: "assets/cards/アグノム_ポケカ.png" },
+  { name: "アシレーヌ", rarity: "★★",  img: "assets/cards/アシレーヌ_ポケカ.png" },
+  { name: "アズマオウ", rarity: "◆", img: "assets/cards/アズマオウ_ポケカ.png" },
+  { name: "アブソル", rarity: "★★", img: "assets/cards/アブソル_ポケカ.png" },
+  { name: "アブソル",rarity: "★★",img: "assets/cards/アブソル2_ポケカ.png" },
+  { name: "アママイコ", rarity: "◆",  img: "assets/cards/アママイコ_ポケカ.png" },
+  { name: "アマルルガ", rarity: "◆◆",  img: "assets/cards/アマルルガ_ポケカ.png" },
+  { name: "アメモース", rarity: "◆",  img: "assets/cards/アメモース_ポケカ.png" },
+  { name: "アラブルタケ", rarity: "★", img: "assets/cards/アラブルタケ_ポケカ.png" },
+  { name: "アルセウス", rarity: "★★★", img: "assets/cards/アルセウス_ポケカ.png" },
+  { name: "アルセウス",rarity: "★★★",img: "assets/cards/アルセウス2_ポケカ.png" }
 ];
 
 
