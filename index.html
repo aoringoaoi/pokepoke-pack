@@ -2,11 +2,34 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pack Simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>パック開封シミュレーター</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>パック開封（テスト）</h1>
-    <p>ここが表示されたらPages成功！</p>
+    <main class="app">
+      <header class="app-header">
+        <h1>パック開封シミュレーター</h1>
+      </header>
+
+      <section id="pack-screen" class="screen active" aria-live="polite">
+        <button id="pack" class="pack" type="button" aria-label="パックを開封する">
+          <span class="pack-label">PACK</span>
+          <span class="pack-hint">上にスワイプして開封</span>
+        </button>
+      </section>
+
+      <section id="cards-screen" class="screen" aria-live="polite">
+        <div class="card-stage">
+          <img id="card-image" class="card-image" src="" alt="" />
+        </div>
+        <p id="card-name" class="card-name"></p>
+        <p id="card-meta" class="card-meta"></p>
+        <button id="next-button" class="next-button" type="button">タップして次のカードへ</button>
+        <div id="thumbs" class="thumbs" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
