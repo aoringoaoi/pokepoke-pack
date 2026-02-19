@@ -17,6 +17,21 @@ const CARD_POOL = [
   { name: "アルセウス",rarity: "★★★",img: "assets/cards/アルセウス2_ポケカ.png" }
 ];
 
+// 画像を先読みしてキャッシュ（表示を速くする）
+const imageCache = new Map();
+
+function preloadImages() {
+  CARD_POOL.forEach(card => {
+    if (!card.img) return;
+    const img = new Image();
+    img.src = card.img;
+    imageCache.set(card.img, img);
+  });
+}
+
+// 先読み実行
+preloadImages();
+
 
 const packScreen = document.getElementById("pack-screen");
 const cardsScreen = document.getElementById("cards-screen");
@@ -83,7 +98,8 @@ function renderThumbs() {
 
 function renderCurrentCard() {
   const card = openedCards[currentIndex];
-  cardImage.src = card.img || createCardSvg(card, currentIndex);
+  const cached = card.img ? imageCache.get(card.img) : null;
+  cardImage.src = cached ? cached.src : (card.img || createCardSvg(card, currentIndex));
   cardImage.alt = `${card.name} のカード画像`;
   cardName.textContent = card.name;
   cardMeta.textContent = `${card.rarity} / ${currentIndex + 1}枚目`; 
