@@ -1,15 +1,22 @@
 const CARD_POOL = [
-  { name: "リーフィア", rarity: "★" },
-  { name: "ヒトカゲ", rarity: "◆" },
-  { name: "フシギダネ", rarity: "◆" },
-  { name: "ゼニガメ", rarity: "◆" },
-  { name: "ピカチュウ", rarity: "★★" },
-  { name: "ゲンガー", rarity: "★★" },
-  { name: "ルカリオ", rarity: "★★" },
-  { name: "カイリュー", rarity: "★★★" },
-  { name: "ミュウ", rarity: "★★★" },
-  { name: "ミライドン", rarity: "★★★★" }
+  { name: "カード1", rarity: "★★",    img: "assets/cards/AZのフラエッテ_ポケカ.png" },
+  { name: "カード2", rarity: "★★",    img: "assets/cards/アーゴヨン_ポケカ.png" },
+  { name: "カード3", rarity: "◆◆",    img: "assets/cards/アーマーガア_ポケカ.png" },
+  { name: "カード4", rarity: "★",    img: "assets/cards/アーマーガア_ポケカ.png" },
+  { name: "カード5", rarity: "★",  img: "assets/cards/アクジキング_ポケカ.png" },
+  { name: "カード6", rarity: "★★",  img: "assets/cards/アグノム_ポケカ.png" },
+  { name: "カード7", rarity: "★★",  img: "assets/cards/アシレーヌ_ポケカ.png" },
+  { name: "カード8", rarity: "◆", img: "assets/cards/アズマオウ_ポケカ.png" },
+  { name: "カード9", rarity: "★★", img: "assets/cards/アブソル_ポケカ.png" },
+  { name: "カード10",rarity: "★★",img: "assets/cards/アブソル2_ポケカ.png" }
+  { name: "カード5", rarity: "◆",  img: "assets/cards/アママイコ_ポケカ.png" },
+  { name: "カード6", rarity: "◆◆",  img: "assets/cards/アマルルガ_ポケカ.png" },
+  { name: "カード7", rarity: "◆",  img: "assets/cards/アメモース_ポケカ.png" },
+  { name: "カード8", rarity: "★", img: "assets/cards/アラブルタケ_ポケカ.png" },
+  { name: "カード9", rarity: "★★★", img: "assets/cards/アルセウス_ポケカ.png" },
+  { name: "カード10",rarity: "★★★",img: "assets/cards/アルセウス2_ポケカ.png" }
 ];
+
 
 const packScreen = document.getElementById("pack-screen");
 const cardsScreen = document.getElementById("cards-screen");
@@ -76,8 +83,8 @@ function renderThumbs() {
 
 function renderCurrentCard() {
   const card = openedCards[currentIndex];
-  cardImage.src = createCardSvg(card, currentIndex);
-  cardImage.alt = `${card.name} のダミーカード画像`;
+  cardImage.src = card.img || createCardSvg(card, currentIndex);
+  cardImage.alt = `${card.name} のカード画像`;
   cardName.textContent = card.name;
   cardMeta.textContent = `${card.rarity} / ${currentIndex + 1}枚目`; 
 
