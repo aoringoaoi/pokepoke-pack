@@ -2,7 +2,7 @@ const CARD_POOL = [
   { name: "AZのフラエッテ", rarity: "★★",    img: "assets/cards/AZのフラエッテ_ポケカ.png" },
   { name: "アーゴヨン", rarity: "★★",    img: "assets/cards/アーゴヨン_ポケカ.png" },
   { name: "アーマーガア", rarity: "◆◆",    img: "assets/cards/アーマーガア_ポケカ.png" },
-  { name: "アーマルド", rarity: "★",    img: "assets/cards/アーマルド_ポケカ_ポケカ.png" },
+  { name: "アーマルド", rarity: "★",    img: "assets/cards/アーマルド_ポケカ.png" },
   { name: "アクジキング", rarity: "★",  img: "assets/cards/アクジキング_ポケカ.png" },
   { name: "アグノム", rarity: "★★",  img: "assets/cards/アグノム_ポケカ.png" },
   { name: "アシレーヌ", rarity: "★★",  img: "assets/cards/アシレーヌ_ポケカ.png" },
