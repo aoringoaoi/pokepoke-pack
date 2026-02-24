@@ -14,7 +14,23 @@ const CARD_POOL = [
   { name: "アメモース", rarity: "◆",  img: "assets/cards/アメモース_ポケカ.png" },
   { name: "アラブルタケ", rarity: "★", img: "assets/cards/アラブルタケ_ポケカ.png" },
   { name: "アルセウス", rarity: "★★★", img: "assets/cards/アルセウス_ポケカ.png" },
-  { name: "アルセウス",rarity: "★★★",img: "assets/cards/アルセウス2_ポケカ.png" }
+  { name: "オーガポン",rarity: "★★",img: "assets/cards/オーガポン2_ポケカ.png" } ,
+  { name: "イベルタル", rarity: "★★★",    img: "assets/cards/イベルタル_ポケカ.png" },
+  { name: "イルカマン", rarity: "★★",    img: "assets/cards/イルカマン_ポケカ.png" },
+  { name: "ウーラオス（いちげき）", rarity: "★★",    img: "assets/cards/ウーラオス（いちげき）_ポケカ.png" },
+  { name: "インテレオン", rarity: "★★",    img: "assets/cards/インテレオン_ポケカ.png" },
+  { name: "イーブイ", rarity: "★",  img: "assets/cards/イーブイ3_ポケカ.png" },
+  { name: "ウガツホムラ", rarity: "★★",  img: "assets/cards/ウガツホムラ_ポケカ.png" },
+  { name: "ウツロイド", rarity: "★★",  img: "assets/cards/ウツロイド_ポケカ.png" },
+  { name: "エムリット", rarity: "★★", img: "assets/cards/エムリット_ポケカ.png" },
+  { name: "エモンガ", rarity: "★★", img: "assets/cards/エモンガ_ポケカ.png" },
+  { name: "エルフーン",rarity: "★★",img: "assets/cards/エルフーン_ポケカ.png" },
+  { name: "エルレイド", rarity: "★★",  img: "assets/cards/エルレイド2_ポケカ.png" },
+  { name: "エーフィ", rarity: "★★",  img: "assets/cards/エーフィ_ポケカ.png" },
+  { name: "オドリドリ", rarity: "◆",  img: "assets/cards/オドリドリ_ポケカ.png" },
+  { name: "オノノクス", rarity: "★★", img: "assets/cards/オノノクス_ポケカ.png" },
+  { name: "オリジンパルキア", rarity: "★★", img: "assets/cards/オリジンパルキア_ポケカ.png" },
+  { name: "オリーヴァ",rarity: "◆◆",img: "assets/cards/オリーヴァ_ポケカ.png" }
 ];
 
 // =========================
