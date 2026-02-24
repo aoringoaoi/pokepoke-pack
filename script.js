@@ -30,6 +30,24 @@ const CARD_POOL = [
   { name: "オドリドリ", rarity: "◆",  img: "assets/cards/オドリドリ_ポケカ.png" },
   { name: "オノノクス", rarity: "★★", img: "assets/cards/オノノクス_ポケカ.png" },
   { name: "オリジンパルキア", rarity: "★★", img: "assets/cards/オリジンパルキア_ポケカ.png" },
+  { name: "オリーヴァ",rarity: "◆◆",img: "assets/cards/オリーヴァ_ポケカ.png" },
+  { name: "カイリュー", rarity: "★★", img: "assets/cards/カイリュー_ポケカ.png" },
+  { name: "カクレオン",rarity: "◆",img: "assets/cards/カクレオン_ポケカ.png" } ,
+  { name: "カヌチャン", rarity: "◆",    img: "assets/cards/カヌチャン_ポケカ.png" },
+  { name: "カプ コケコ", rarity: "★★",    img: "assets/cards/カプ コケコ_ポケカ.png" },
+  { name: "カプレヒレ", rarity: "★★",    img: "assets/cards/カプレヒレ_ポケカ.png" },
+  { name: "カミツオロチ", rarity: "★★",    img: "assets/cards/カミツオロチ_ポケカ.png" },
+  { name: "カミツルギ", rarity: "★★",  img: "assets/cards/カミツルギ_ポケカ.png" },
+  { name: "ガチグマ", rarity: "★★★",  img: "assets/cards/ガチグマ_ポケカ.png" },
+  { name: "ガチゴラス", rarity: "★★",  img: "assets/cards/ガチゴラス_ポケカ.png" },
+  { name: "ガラガラ", rarity: "◆", img: "assets/cards/ガラガラ_ポケカ.png" },
+  { name: "ガラルサンダー", rarity: "★★", img: "assets/cards/ガラルサンダー_ポケカ.png" },
+  { name: "ガルーラ",rarity: "◆◆",img: "assets/cards/ガルーラ_ポケカ.png" },
+  { name: "キチキギス", rarity: "★★",  img: "assets/cards/キチキギス_ポケカ.png" },
+  { name: "キノガッサ", rarity: "◆◆",  img: "assets/cards/キノガッサ2_ポケカ.png" },
+  { name: "ギガイアス", rarity: "★★",  img: "assets/cards/ギガイアス_ポケカ.png" },
+  { name: "オノノクス", rarity: "★★", img: "assets/cards/オノノクス_ポケカ.png" },
+  { name: "オリジンパルキア", rarity: "★★", img: "assets/cards/オリジンパルキア_ポケカ.png" },
   { name: "オリーヴァ",rarity: "◆◆",img: "assets/cards/オリーヴァ_ポケカ.png" }
 ];
 
@@ -96,9 +114,10 @@ function preloadOne(src) {
   });
 }
 
-function preloadNextCard() {
-  const next = openedCards[currentIndex + 1];
-  if (next && next.img) preloadOne(next.img);
+function preloadSelected(cards) {
+  cards.forEach(c => {
+    if (c && c.img) preloadOne(c.img);
+  });
 }
 
 // =========================
@@ -198,14 +217,22 @@ function renderCurrentCard() {
       : "タップして次のカードへ";
 
   renderThumbs();
-  preloadNextCard(); // 次の1枚を先読み
+  preloadNextCard(); 
 }
 
+function preloadNextCard() {
+  const next = openedCards[currentIndex + 1];
+  if (next && next.img) preloadOne(next.img);
+}
 // =========================
 // 8) パック開封
 // =========================
 function openPack() {
   openedCards = sampleCards(5);
+
+  // ★追加：今回引いたカードだけ先読み（スマホ軽い）
+  preloadSelected(openedCards);
+
   currentIndex = 0;
   packScreen.classList.remove("active");
   cardsScreen.classList.add("active");
@@ -216,8 +243,6 @@ function openPack() {
 // 9) イベント
 // =========================
 
-// 初回表示時に全部プリロード（最初だけ少し待つが、以後爆速）
-preloadImagesAll();
 
 packButton.addEventListener("touchstart", (event) => {
   startY = event.touches[0].clientY;
